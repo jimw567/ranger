@@ -99,7 +99,8 @@ class TitleBar(Widget):
             bar.add(self.fm.username, 'hostname', clr, fixed=True)
             bar.add('@', 'hostname', clr, fixed=True)
             bar.add(self.fm.hostname, 'hostname', clr, fixed=True)
-            bar.add(' ', 'hostname', clr, fixed=True)
+            bar.add('-', 'hostname', clr, fixed=True)
+            bar.add(self.fm.ranger_session, 'hostname', clr, fixed=True)
 
         pathway = self.fm.thistab.pathway
         if self.settings.tilde_in_titlebar and \

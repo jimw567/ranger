@@ -75,7 +75,7 @@ class FM(Actions,  # pylint: disable=too-many-instance-attributes
             self.username = 'uid:' + str(os.geteuid())
         self.hostname = socket.gethostname()
         self.home_path = os.path.expanduser('~')
-
+        self.ranger_session = os.getenv('RANGER_SESSION');
         mimetypes.knownfiles.append(os.path.expanduser('~/.mime.types'))
         mimetypes.knownfiles.append(self.relpath('data/mime.types'))
         self.mimetypes = mimetypes.MimeTypes()
